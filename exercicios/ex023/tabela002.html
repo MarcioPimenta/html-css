@@ -13,6 +13,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -20,9 +21,25 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: rgb(71, 69, 69);
             color: white;
+        }
+
+        thead {
+            position: sticky;
+            top: -1px;
+        }
+
+        tbody > tr:nth-child(2n) { /*no lugar de 2n podemos usar odd( ímpar - 2n-1 ), even( par - 2n )*/
+            background-color: rgb(173, 170, 170);
         }
 
         td.num {
@@ -35,18 +52,22 @@
     <!-- 
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION (é o 'título' da tabela, a legenda da tabela)
             THEAD
                 TR, TD, TH
             TBODY
                 TR, TD, TH
             TFOOT
                 TR, TD, TH
+        
+        Utilizando as tags semânticas corretamente a ordem de exibição será respeitada, mesmo que elas estejam fora de ordem
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -160,9 +181,18 @@
             </tr>
         </tbody>
         <tfoot>
-            <th>Total de Habitantes</th>
+            <th scope="row">Total de Habitantes</th>
             <td class="num"><strong>213.317.639</strong></td>
         </tfoot>
     </table>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A aliquid ipsum corporis nesciunt vel dolorem sed. Molestias adipisci tempora vero nemo totam sint earum dolore. Suscipit debitis pariatur omnis tempora! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores impedit sed officiis sit consectetur rem expedita, ad ea minima eaque quasi dicta, eligendi a nostrum natus perspiciatis. Numquam, recusandae voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolores id quo distinctio dolore ullam veritatis fugiat, tempore molestias temporibus deserunt delectus rerum, dolor libero odio illum debitis iusto officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis commodi quos asperiores aut vel? Est culpa, quia obcaecati quis expedita et sed, nisi repellendus vero itaque doloribus praesentium optio?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A aliquid ipsum corporis nesciunt vel dolorem sed. Molestias adipisci tempora vero nemo totam sint earum dolore. Suscipit debitis pariatur omnis tempora! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores impedit sed officiis sit consectetur rem expedita, ad ea minima eaque quasi dicta, eligendi a nostrum natus perspiciatis. Numquam, recusandae voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolores id quo distinctio dolore ullam veritatis fugiat, tempore molestias temporibus deserunt delectus rerum, dolor libero odio illum debitis iusto officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis commodi quos asperiores aut vel? Est culpa, quia obcaecati quis expedita et sed, nisi repellendus vero itaque doloribus praesentium optio?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A aliquid ipsum corporis nesciunt vel dolorem sed. Molestias adipisci tempora vero nemo totam sint earum dolore. Suscipit debitis pariatur omnis tempora! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores impedit sed officiis sit consectetur rem expedita, ad ea minima eaque quasi dicta, eligendi a nostrum natus perspiciatis. Numquam, recusandae voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolores id quo distinctio dolore ullam veritatis fugiat, tempore molestias temporibus deserunt delectus rerum, dolor libero odio illum debitis iusto officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis commodi quos asperiores aut vel? Est culpa, quia obcaecati quis expedita et sed, nisi repellendus vero itaque doloribus praesentium optio?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A aliquid ipsum corporis nesciunt vel dolorem sed. Molestias adipisci tempora vero nemo totam sint earum dolore. Suscipit debitis pariatur omnis tempora! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores impedit sed officiis sit consectetur rem expedita, ad ea minima eaque quasi dicta, eligendi a nostrum natus perspiciatis. Numquam, recusandae voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolores id quo distinctio dolore ullam veritatis fugiat, tempore molestias temporibus deserunt delectus rerum, dolor libero odio illum debitis iusto officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis commodi quos asperiores aut vel? Est culpa, quia obcaecati quis expedita et sed, nisi repellendus vero itaque doloribus praesentium optio?</p>
+    
 </body>
 </html>
