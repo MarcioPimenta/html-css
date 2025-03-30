@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        .conteiner {
+            background-color: lightsalmon;
+            padding: 10px;
+            height: 100px;
+            display: flex;
+            /* flex-direction: row-reverse;
+            flex-wrap: wrap-reverse; */
+            flex-flow: column-reverse wrap-reverse;
+        }
+
+        .item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexible Box</h1>
+    <!-- para a div pai é necessário utilizar a display flex, e para as divs filhas utilizar o atributo flex com o parâmetro desejado, no nosso exemplo o parâmetro flex -->
+    <div class="conteiner">
+        <div class="item">Exemplo de Bloco A</div>
+        <div class="item">Exemplo de Bloco B</div>
+        <div class="item">Exemplo de Bloco C</div>
+        <div class="item">Exemplo de Bloco D</div>
+        <div class="item">Exemplo de Bloco E</div>
+        <div class="item">Exemplo de Bloco F</div>
+        <div class="item">Exemplo de Bloco G</div>
+    </div>
+</body>
+</html>
