@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        .conteiner {
+            background-color: lightsalmon;
+            padding: 10px;
+            height: 300px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around; /* 
+            flex-start: cola no main start, 
+            flex-end: cola no main end, 
+            center: centraliza no main axis, 
+            space-between: 1° cola no main start, último cola no main end, espaçamento restante dividido igualmente entre os itens, 
+            space-evenly: cria espaçamentos iguais e aplica antes e depois dos itens, 
+            space-around: divide a área total entre os itens, descobindo a área disponível para cada item. Centraliza cada item em sua respectiva área, deixando o espaçamento ao redor deles */
+            align-items: center; /* 
+            stretch: preenche o cross axis, 
+            flex-start: cola no cross start, 
+            flex-end: cola no cross end, 
+            center: centraliza no cross axis */
+        }
+
+        .item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexible Box</h1>
+    <!-- para a div pai é necessário utilizar a display flex, e para as divs filhas utilizar o atributo flex com o parâmetro desejado, no nosso exemplo o parâmetro flex -->
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
