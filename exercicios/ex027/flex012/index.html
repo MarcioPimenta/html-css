@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        .conteiner {
+            background-color: lightsalmon;
+            padding: 10px;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            /* 
+            
+            flex: grow shrink basis; 
+            
+            flex: 0 1 auto; valores padrão para cada uma das propriedades
+            flex: auto; pode ser simplificado dessa maneira
+
+            flex: 0 0 auto; item não flexível, não pode crescer nem diminuir
+            flex: none; pode ser simplificado dessa maneira
+
+            flex: 1 1 auto; item completamente flexível, pode crescer e diminuir na proporção 1 pra 1
+            flex: auto; pode ser simplificado dessa maneira
+
+            flex: 3; a utilização de um único número faz referência somente a primeira propriedade, que é o flex-grow, as demais recebem o valor padrão.
+            flex: 3 1 auto; pode ser simplificado dessa maneira
+
+            */
+        }
+
+        #a {
+            /*
+            flex-shrink: 0;
+            flex-grow: 1;
+            flex-basis: 200px;
+            */
+
+            flex: 1 0 200px;
+        }
+
+        #b {
+            /*
+            flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 150px;
+            */
+
+            flex: 1 1 150px;
+        }
+        
+        #c {
+            /*
+            flex-shrink: 8;
+            flex-grow: 1;
+            flex-basis: auto;
+            */
+
+            flex: 1 8 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexible Box: Shorthand</h1>
+    <h2>Flex: grow shrink basis;</h2>
+    <!-- para a div pai é necessário utilizar a display flex, e para as divs filhas utilizar o atributo flex com o parâmetro desejado, no nosso exemplo o parâmetro flex -->
+    <div class="conteiner">
+        <div class="item" id="a">A</div>
+        <div class="item" id="b">B</div>
+        <div class="item" id="c">C</div>
+        <!--
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        -->
+    </div>
+</body>
+</html>
