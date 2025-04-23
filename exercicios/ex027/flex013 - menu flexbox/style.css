@@ -25,12 +25,19 @@ header {
 }
 
 header > h1 {
+    /*
     border: 1px dotted black;
+    utilizado durante o desenvolvimento para facilitar a visualização do comportamento da caixa
+    */
     flex: 0 0 200px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.411);
 }
 
 header > nav {
+    /*
     border: 1px dotted black;
+    utilizado durante o desenvolvimento para facilitar a visualização do comportamento da caixa
+    */
     margin: 10px;
     display: flex;
     flex-flow: row wrap;

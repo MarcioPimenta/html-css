@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header, header > nav {
+    flex-flow: column nowrap;
+}
+
+header > h1 {
+    border: 1px dotted black;
+    flex-basis: 50px;
+    /*
+    flex: 0 0 50px; grow shrink basis
+    */
+}
+
+nav > a {
+    width: 90vw;
+}
